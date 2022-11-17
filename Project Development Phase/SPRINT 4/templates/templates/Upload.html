@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Upload.css">
+    <link rel="stylesheet" href='/static/static/css/Upload.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Upload</title>
+</head>
+
+<body>
+    <header>
+        <p
+            style="color:white;font-family: Verdana, Geneva, Tahoma, sans-serif; cursor: pointer; margin-left:100px; font-size: 25px;">
+            HANDWRITTEN DIGIT RECOGNITION SYSTEM</p>
+        <nav>
+            <ul class="nav_links">
+                <ul class="dropdown">
+                    <li><a href="/">HOME</a></li>
+                    <ul class="predict">
+                        <li><a href="">PREDICTION</a></li>
+                        <ul class="prediction">
+                            <li><a class="active" href="/Upload" class="upload">UPLOAD</a></li>
+                            <li><a href="/Draw" class="draw">DRAW</a></li>
+                        </ul>
+                    </ul>
+                    <li><a href="/Guidelines">GUIDELINES</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <!-- <div class="drag-area">
+        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <header style="background-color: white; color:#5256ad ;">Drag & Drop to Upload File</header>
+        <span>OR</span>
+        <button style="text-decoration:underline;">Browse File</button>
+        <input type="file" hidden> -->
+
+    <form action="/Predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" class="upload-box">
+        <br>
+
+        <button type="submit" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:20px;margin-left:590px;margin-top: 130px; height: 50px; width:160px;
+            background-color: darkslategray; color: white;">PREDICT</button>
+
+       
+            <button style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;position:absolute;margin-left:40px; margin-top:130px; height: 50px; width:160px;
+        background-color: darkslategray; color: white;"><a href='/Upload'>CLEAR</a></button><br><br><br>
+        <h3 style="bottom:300px;position:absolute;margin-left: 600px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 20px;">PREDICTED RESULT = {{showcase}}</h3>
+    
+    </form>
+
+    
+    <!-- <button type="button"
+        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-left:320px; margin-top: 20px; height: 40px; width:100px; background-color: darkslategray; color: white;">PREDICT</button> -->
+    <!-- <button  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-left:1000px; margin-top:-600px; height: 50px; width:160px;
+        background-color: darkslategray; color: white;"><a href = '/Upload'>CLEAR</a></button> -->
+</body>
+
+</html>
